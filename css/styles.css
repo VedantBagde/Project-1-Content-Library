@@ -1,0 +1,169 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    transition: background-color 0.5s;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+header {
+    background-color: #004e92;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0;
+    padding-left: 10px;
+    font-size: 2.5em;
+    animation: slide-in 1.5s ease-in-out;
+}
+
+@keyframes slide-in {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+nav {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-btn {
+    padding: 15px 30px;
+    margin: 0 10px;
+    background-color: #004e92;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #009ffd;
+    transform: translateY(-5px);
+}
+
+section {
+    display: none;
+    margin: 20px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fade-in 1s ease-in-out;
+}
+
+.active {
+    display: block;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in 1.5s forwards;
+}
+
+@keyframes fade-in {
+    to { opacity: 1; }
+}
+
+.animated-btn {
+    background-color: #004e92;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.animated-btn:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004e92;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+/* Add 3D hover effect to course cards */
+.course-card {
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.course-card:hover {
+    transform: translateY(-10px) rotateY(10deg) rotateX(5deg);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Apply some text and link styling inside the course cards */
+.course-card h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.course-card p {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.course-card a {
+    text-decoration: none;
+    color: #004e92;
+    font-weight: bold;
+}
+
+.course-card a:hover {
+    color: #009ffd;
+}
+
+
+/* Floating effect for elements */
+.floating {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Floating effect for course cards */
+.course-card.floating {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Floating effect for sections */
+section.floating {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode background and text colors */
+.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* Update other dark mode styles as needed */
+
